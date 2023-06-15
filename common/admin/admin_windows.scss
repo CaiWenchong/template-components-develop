@@ -1,0 +1,25 @@
+/* 城市脉动后台管理公用基础样式*/
+
+$md_admin_topwindow_h:200rpx;
+$md_admin_leftwindow_w:400rpx;
+
+// 计算出内容部分的高度
+$md_admin_content_h:calc(100vh - $md_admin_topwindow_h) !important;
+uni-top-window{
+	display: flex;//默认为inner-block需要修改为占有高度的容器
+	height: $md_admin_topwindow_h;
+}
+uni-content{
+	min-height: $md_admin_content_h;
+	// 默认页面100%高,超时部分自动overflow:auto
+	uni-main {
+		height: 100%;
+		overflow: auto;//最外层拦截一下，如果超出高度则根据浏览器适配
+	}
+	uni-left-window{
+		height: 100%;
+		overflow: auto;//最外层拦截一下，如果超出高度则根据浏览器适配
+		width: auto;
+	}
+}
+

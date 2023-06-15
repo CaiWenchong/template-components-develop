@@ -1,0 +1,118 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		//#ifdef H5
+		{
+			"path": "pages/main/main",
+			"style": {
+				"navigationBarTitleText": "管理后台首页",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/content/table",
+			"style": {
+				"navigationBarTitleText": "列表",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/content/detail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+
+		}
+		//#endif
+	],
+	// 分路由，在小程序中为子包
+	"subPackages": [
+		//#ifdef H5
+		{
+			"root": "pages_demo",
+			"pages": [{
+					"path": "index/index",
+					"style": {
+						"navigationBarTitleText": "pages_demo首页"
+					}
+				},
+				{
+					"path": "login/login",
+					"style": {
+						"navigationBarTitleText": "pages_demo登录页"
+					}
+
+				}, {
+					"path": "zion_debug/zion_debug",
+					"style": {
+						"navigationBarTitleText": "zion_debug调试页面"
+					}
+				}, {
+					"path": "show/show",
+					"style": {
+						"navigationBarTitleText": "show"
+					}
+
+				}
+			]
+		}
+		//#endif
+	],
+	// 全局样式配置
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		//"navigationBarTitleText": "admin_template",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		// #ifdef H5
+		//"rpxCalcMaxDeviceWidth": 99999999, // rpx 计算所支持的最大设备宽度，单位 px，默认值为 960
+		//"rpxCalcBaseDeviceWidth": 750, // rpx 计算使用的基准设备宽度，设备实际宽度超出 rpx 计算所支持的最大设备宽度时将按基准宽度计算，单位 px，默认值为 375
+		//"rpxCalcIncludeWidth": 1280, // rpx 计算特殊处理的值，始终按实际的设备宽度计算，单位 rpx，默认值为 750
+		// #endif
+		"navigationStyle": "custom"
+	},
+	"uniIdRouter": {},
+
+	// #ifdef H5
+	"topWindow": {
+		"path": "windows/topWindow/topWindow",
+		"style": {
+			//"minHeight": "0rpx",
+			//"maxHeight":"500rpx"
+		},
+		"matchMedia": {
+			// 屏幕宽度小于768时，不显示窗体
+			"minWidth": 960
+		}
+	},
+	"leftWindow": {
+		"path": "windows/leftWindow/leftWindow",
+		"style": {
+			//"minWidth": "0rpx",
+			//"maxWidth":"500rpx"
+		},
+		"matchMedia": {
+			// 屏幕宽度小于768时，不显示窗体
+			"minWidth": 960
+		}
+	}
+
+	/* 	"rightWindow": {
+			"path": "windows/rightWindow/rightWindow",
+			"style": {
+				//"width": "210rpx"
+			},
+			"matchMedia": {
+				// 屏幕宽度小于768时，不显示窗体
+				"minWidth": 960
+			}
+		} */
+	// #endif
+}

@@ -1,0 +1,7 @@
+{
+  "name": "md_getcode",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

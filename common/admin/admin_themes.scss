@@ -1,0 +1,23 @@
+$themes: (
+	default: (
+		primary-color: $uni-color-primary,
+		success-color: $uni-color-success,
+		warn-color: $uni-color-error,
+		warning-color: $uni-color-warning,
+		error-color: $uni-color-error
+	),
+	green: (
+		primary-color: #42b983,
+		success-color: $uni-color-success,
+		warn-color: $uni-color-error,
+		warning-color: $uni-color-warning,
+		error-color: $uni-color-error
+	),
+	dark: (
+		primary-color: #ffff00,
+		success-color: #3a3600,
+		warn-color: #3a3600,
+		warning-color: #3a3600,
+		error-color: #3a3600
+	)
+);

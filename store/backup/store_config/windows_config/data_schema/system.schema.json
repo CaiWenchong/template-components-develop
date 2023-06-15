@@ -1,0 +1,35 @@
+{
+	"bsonType": "object", // 固定节点
+	"description": "表的描述",
+	"required": [], // 必填字段
+	"permission": {
+		"read": false, // 前端非admin的读取记录权限控制。默认值是false，即可以不写。可以简单的true/false，也可以写表达式
+		"create": false, // 前端非admin的新增记录权限控制。默认值是false，即可以不写。可以简单的true/false，也可以写表达式 
+		"update": false, // 前端非admin的更新记录权限控制。默认值是false，即可以不写。可以简单的true/false，也可以写表达式
+		"delete": false, // 前端非admin的删除记录权限控制。默认值是false，即可以不写。可以简单的true/false，也可以写表达式
+		"count": false // 前端非admin的求数权限控制。默认值是true，即可以不写。可以简单的true/false，也可以写表达式
+	},
+	"properties": { // 表的字段清单
+		"id": {
+			"bsonType": "string",
+			"label": "平台id",
+			"trim": "both",
+			"minLength": 2,
+			"maxLength": 17
+		},
+		"name": {
+			"bsonType": "string",
+			"label": "平台名称",
+			"trim": "both",
+			"minLength": 2,
+			"maxLength": 17
+		},
+		"logo": {
+			"bsonType": "object",
+			"label": "平台logo",
+		}
+	},
+	"fieldRules": [
+		// 字段之间的约束关系。比如字段开始时间小于字段结束时间。也可以只校验一个字段。支持表达式
+	]
+}
