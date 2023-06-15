@@ -1,10 +1,13 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+
+
 		{
 			"path": "pages/login/login",
 			"style": {
 				"navigationBarTitleText": "登录",
 				"enablePullDownRefresh": false
+				// "navigationStyle": "custom"
 			}
 
 		},
@@ -70,15 +73,31 @@
 		"navigationBarTextStyle": "black",
 		//"navigationBarTitleText": "admin_template",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
 		// #ifdef H5
 		//"rpxCalcMaxDeviceWidth": 99999999, // rpx 计算所支持的最大设备宽度，单位 px，默认值为 960
 		//"rpxCalcBaseDeviceWidth": 750, // rpx 计算使用的基准设备宽度，设备实际宽度超出 rpx 计算所支持的最大设备宽度时将按基准宽度计算，单位 px，默认值为 375
 		//"rpxCalcIncludeWidth": 1280, // rpx 计算特殊处理的值，始终按实际的设备宽度计算，单位 rpx，默认值为 750
 		// #endif
-		"navigationStyle": "custom"
+		// "navigationStyle": "custom"
 	},
 	"uniIdRouter": {},
+	"easycom": {
+		"autoscan": true, //是否自动扫描组件
+		"custom": { //自定义扫描规则
+
+			//[组件]：匹配components目录里component/MiniApp和H5文件夹下以【m-xxx】和【h-xxx】开头,【.vue】结尾的文件
+			"^m-(.*)": "@/components/component/MiniApp/m-$1/m-$1.vue",
+			"^h-(.*)": "@/components/component/H5/h-$1/h-$1.vue",
+
+			//[页面级组件]：匹配components目录里Pages/miniApp和H5文件夹下以【pm-xxx】和【ph-xxx】开头,【.vue】结尾的文件
+			"^pm-(.*)": "@/components/Pages/miniApp/pm-$1/pm-$1.vue",
+			"^ph-(.*)": "@/components/Pages/H5/ph-$1/ph-$1.vue"
+			
+
+		}
+	},
+
 
 	// #ifdef H5
 	"topWindow": {

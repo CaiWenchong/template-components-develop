@@ -6,7 +6,7 @@
 
 <script>
 	export default {
-		name: "test",
+		name: "template",
 		//1.声明自定义事件：组件的自定义事件，必须事先声明在emits节点中
 		emits: ['count-change'], //也可以用对象的形式，里面可以对事件进行验证，同props
 		// 组件接收参数多种格式

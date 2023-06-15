@@ -24,11 +24,27 @@
 							:style="[$u.addStyle(itemStyle), {flex: scrollable ? '' : 1}]"
 							:class="[`u-tabs__wrapper__nav__item-${index}`, item.disabled && 'u-tabs__wrapper__nav__item--disabled']"
 						>
-							<text
+						
+			
+							<view
 								:class="[item.disabled && 'u-tabs__wrapper__nav__item__text--disabled']"
 								class="u-tabs__wrapper__nav__item__text"
 								:style="[textStyle(index)]"
-							>{{ item[keyName] }}</text>
+							>
+							
+							<view class="" style="margin-right: 10px;">
+								<uni-icons custom-prefix="iconfont" :type="item.icon" size="16"></uni-icons>
+								<!-- <uni-icons custom-prefix="iconfont" :type="item.icon.a" size="16"></uni-icons> -->
+								
+								
+								<!-- <uni-icons  type="contact" size="16"></uni-icons> -->
+							</view>
+							
+							<text>{{ item[keyName] }}</text>
+							
+						
+							</view>
+							
 							<u-badge
 								:show="!!(item.badge && (item.badge.show || item.badge.isDot || item.badge.value))"
 								:isDot="item.badge && item.badge.isDot || propsBadge.isDot"
@@ -355,4 +371,8 @@
 			}
 		}
 	}
+	
+	
+	
+	
 </style>
