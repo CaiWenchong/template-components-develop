@@ -1,6 +1,14 @@
 import storeConfig from "@/store_config/config_app.js"
 let interTimer;
 export default async function(e) {
+	
+	
+
+	// 获取用户手机尺寸大小，设置到本地
+	this.$store.dispatch("bar/getCustomNavBarInfo", {})
+
+
+
 	// 设置全局system_id
 	this.$store.dispatch("app/reqSystem", {
 		system_id: e?.query?.system_id || null
@@ -16,6 +24,10 @@ export default async function(e) {
 		}, 1);
 
 	})
+
+
+
+
 
 	// 监听vuex数据变化,必须要先监听,用作登录跳转
 	uni.$on("on_userTokenDataRefresh", (tokenUser = {}) => {

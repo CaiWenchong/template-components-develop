@@ -8,22 +8,15 @@
 			'text-decoration':deleted?'line-through':'none'
 		}">
 
-
 			<text :style="`font-size:${priceUnitSize}`+'rpx'">
 				{{priceUnit}}
 			</text>
-
 
 			<text :style="`font-size:${priceNumSize}`+'rpx'">
 				{{price}}
 			</text>
 
-
 		</view>
-
-
-
-
 
 	</view>
 </template>
@@ -55,7 +48,7 @@
 			// 	deleted属性设置价格是否为删除态。默认值为false
 			deleted: {
 				type: Boolean,
-				default: true
+				default: false
 			},
 
 			//价格单位，默认￥
@@ -84,8 +77,8 @@
 
 		},
 		created() {
+			//补零函数
 			this.priceZeroFill()
-			
 		},
 		
 		methods:{
@@ -113,8 +106,6 @@
 			
 				
 			}
-			
-			
 			
 		}
 		
