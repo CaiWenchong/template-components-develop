@@ -86,5 +86,12 @@
         },
         "title" : ""
     },
-    "locale" : "auto"
+    "locale" : "auto",
+    "mp-qq" : {
+        "appid" : "1112231495",
+        "setting" : {
+            "postcss" : true,
+            "minified" : true
+        }
+    }
 }
